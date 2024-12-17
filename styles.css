@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+}
+
+/* Custom styles on top of Bootstrap */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.nav-link {
+  color: var(--primary-color) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--secondary-color);
+  color: white !important;
+}
+
+.algorithm-section {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.algorithm-section:hover {
+  transform: translateY(-5px);
+}
+
+.algorithm-section h2 {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.algorithm-section h3 {
+  color: var(--secondary-color);
+}
+
+footer {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.algorithm-section {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.modal-dialog-scrollable {
+  max-height: 90vh;
+}
+
+.modal-xl {
+  max-width: 90vw;
+}
+
+@media (max-width: 768px) {
+  .modal-xl {
+    max-width: 95vw;
+  }
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
